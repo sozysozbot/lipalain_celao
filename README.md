@@ -100,6 +100,9 @@ main.css, boxes.css, lipalain_celao.js の 3 ファイルを配置して、そ�
 
 ## 使い方（日本語の対訳を出すためのコードを流用して、リパライン語表記版を作りたいとき）
 
+具体例：
+https://alarta-fua-fyrdeneriso-lineparine.github.io/lipalain_celao/lineparine'd_celao.html
+
 ```html
 <link rel="stylesheet" href="main.css">
 <link rel="stylesheet" href="boxes.css">
