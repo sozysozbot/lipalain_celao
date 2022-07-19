@@ -1,0 +1,98 @@
+.box {
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px;
+    padding: 2px;
+    border: 2px black solid;
+    white-space: nowrap;
+}
+
+.box.box-sentence {
+    background: #a0ede8;
+}
+
+.box.box-imperative-sentence {
+    background: #a0ede8;
+}
+
+.box.box-sentence-with-auxiliary {
+    background: #ffffff;
+}
+
+.box.box-sentence-with-cancelled-auxiliary {
+    background: #ffffff;
+}
+
+
+
+.box.box-not-shown {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+.box.box-def {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* parts of speech */
+
+.box.box-noun {
+    background: #ccaadd;
+}
+
+.box.box-verb {
+    background: #d0ddaa;
+}
+
+/* cases */
+
+.box.box-nominative {
+    background: #f099aa;
+}
+
+.box.box-accusative {
+    background: #aaccee;
+}
+
+.box.box-dative {
+    background: #e7e8aa;
+}
+
+.box.box-allative {
+    background: #dedddd;
+}
+
+.box.box-preposition {
+    background: #88cc99;
+}
+
+.box.box-postposition {
+    background: #9ac68c;
+}
+
+.box.box-complement {
+    background: #d0ddaa;
+}
+
+.box.box-adj-attributive {
+    background: #d0ddaa;
+    border-style: dotted;
+}
+
+.box.box-adverb {
+    background:#e8aadc;
+    border-style: dotted;
+}
+
+.box.box-genitive {
+    background: #baa27f;
+    border-style: dotted;
+}
+
+.box.box-interjection {
+    border-style: dotted;
+}

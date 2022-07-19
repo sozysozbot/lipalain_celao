@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="boxes.css">
+
+<style>
+	.translation { display: none; }
+	.case_annotation { display: none; }
+</style>
+
+<script>
+REPLACE_ANNOTATION = {
+	"名詞": "ftlexest",
+	"動詞": "ftona",
+	"文": "krandiurg",
+	"前置詞": "kraftanix",
+	"副詞": "ftonaol",
+	"-'d (～の)": "-'d",
+	"-'d (〜の)": "-'d",
+	"形容詞": "kraftan",
+	"補語": "jurlt",
+	"es型動詞": `"es" xale ftona`,
+	" (疑問詞)": " (hmakrant)",
+	"接続詞": "kranti'a",
+	"動詞派生接辞": "jujolel",
+	"助動詞": "kraftona",
+	"mol型動詞": `"mol" xale ftona`,
+	"助動詞を含む文": "krandiurg zu laxn kraftona",
+	"間投詞": "krackrafi'a",
+	"後置詞": "kafnisfamsk",
+	"格接辞": "sansa'd klapals",
+	"elx含有接続詞": `kranti'a zu laxn "elx"`,
+	"修飾制御類": `"elx"`,
+	"助動詞が打ち消された文": "krandiurg zu dirjas kraftona",
+	"文頭動詞命令": "lkurfanggeng shrlovel"
+}
+</script>
+
+<script src="lipalain_celao.js"></script>
+
+<h2>2-2. hame miss xlais?</h2>
+
+<h3>miss lersse lineparine.</h3>
+
+<div id="sentence1"></div>
+
+<script>
+	sentence1.append(sentence(
+		nominative(noun(def("miss", "名詞", "私たち"))),
+		def("lersse", "動詞", "学ぶ"),
+		accusative(noun(def("lineparine", "名詞", "リパライン語"))),
+	));
+</script>
+
+<h3>axlarta perne fal pernal.</h3>
+
+<div id="sentence2"></div>
+	
+<script>
+	sentence2.append(sentence(
+		nominative(noun(def("axlarta", "名詞", "生徒"))),
+		def("perne", "動詞", "座る"),
+		preposition("fal", "〜に・で", noun(def("pernal", "名詞", "椅子"))),
+	));
+</script>
+
+<h2>3-3. hame lkurf fal isil vazirju?</h2>
+
+<h3>lankirler mol fal mele.</h3>
+
+<div id="sentence3"></div>
+
+<script>
+	sentence3.append(sentence(
+		nominative(noun(def("lankirler", "名詞", "医者"))),
+		def("mol", "動詞", "ある・いる"),
+		preposition("fal", "〜に・で", noun(def("mele", "名詞", "近所")))
+	));
+</script>
+
+<h3>mi set styvud mels firuxes.</h3>
+
+<div id="sentence4"></div>
+
+<script>
+	sentence4.append(sentence(
+		nominative(noun(def("mi", "名詞", "私"))),
+		adverb(def("set", "副詞", "とても")),
+		def("styvud", "動詞", "痛みを感じる"),
+		preposition("mels", "〜に関して", noun(def("firuxes", "名詞", "肘・膝")))
+	));
+</script>
+
+<h2>4-2. miss lersse dejix ad tidestel dejix.</h2>
+<h3>mi'd nais es stoxiet.</h3>
+
+<div id="sentence5"></div>
+
+<script>
+	sentence5.append(sentence(
+		nominative(noun_phrase(
+			genitive(def("mi'd", "-'d (～の)", "私の")),
+			def("nais", "名詞", "ズボン"),
+		)),
+		def("es", "es型動詞", "である"),
+		complement(def("stoxiet", "形容詞", "青い")))
+	)
+</script>
+
+
+<h3>harmie es dejix fon co'd nais?</h3>
+
+<div id="sentence6"></div>
+
+<script>
+	sentence6.append(sentence(
+		nominative(noun(def("harmie", "名詞", "何"))),
+		def("es", "es型動詞", "である"),
+		complement(
+			noun_phrase(
+				noun(def("dejix", "名詞", "色")),
+				def("fon", "- fon -", `英語の "of"`),
+				noun_phrase(
+					genitive(def("co'd", "-'d (〜の)", "あなたの")),
+					def("nais", "名詞", "ズボン")
+				)
+			)
+		)
+	));
+</script>
+
+<h2>5-3. miss kverniacelemees.</h2>
+
+<h3>harmie co duxien?</h3>
+
+<div id="sentence7"></div>
+
+<script>
+	sentence7.append(sentence(
+		accusative_q(noun(def("harmie", "名詞", "何"))),
+		nominative(noun(def("co", "名詞", "あなた"))),
+		def("duxien", "動詞", "職業とする"),
+	));
+</script>
+
+<h3>mi'd ferlk es ales.ivane mal mi duxien kynte.</h3>
+
+<div id="sentence8"></div>
+
+<script>
+	sentence8.append(sentence(
+		sentence(
+			nominative(noun_phrase( 
+				genitive(def("mi'd", "-'d (〜の)", "私の")),
+				def("ferlk", "名詞", "名前")
+			)),
+			def("es", "es型動詞", "である"),
+			complement(noun(def("ales.ivane", "名詞", "アレス・イヴァネ（人名）")))
+		),
+		def("mal", "接続詞", "そして"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("duxien", "動詞", "職業とする"),
+			accusative(noun(def("kynte", "名詞", "教師")))
+		)
+	));
+</script>
+
+<h2>6-1. miss lersse mels ftono.</h2>
+
+<h3>si lirf akrantio jynut.</h3>
+
+<div id="sentence9"></div>
+
+<script>
+	sentence9.append(sentence(
+		nominative(noun(def("si", "名詞", "彼"))),
+		def("lirf", "動詞", "好む"),
+		accusative(derived_noun(
+			"-o", "〜すること",
+			sentence(
+				def("akranti", "動詞", "読む"),
+				accusative(noun(def("jynut", "名詞", "本")))
+			)
+		))
+	))
+</script>
+
+<h3>si lkurf mels eso vazirju.</h3>
+
+<div id="sentence10"></div>
+
+<script>
+	sentence10.append(sentence(
+		nominative(noun(def("si", "名詞", "彼"))),
+		def("lkurf", "動詞", "話す"),
+		preposition("mels", "〜に関して", 
+			derived_noun("-o", "〜すること", sentence(
+				def("es", "es型動詞", "である"),
+				complement(def("vazirju", "形容詞", "具合が悪い"))
+			))
+		),
+	))
+</script>
+
+<h2>8-2. hame miss tidest sxe acirlan?</h2>
+
+<h3>mi knloan lurod fua falsirseso.</h3>
+
+<div id="sentence11"></div>
+
+<script>
+	sentence11.append(sentence(
+		nominative(noun(def("mi", "名詞", "私"))),
+		def("knloan", "動詞", "食べる"),
+		accusative(noun(def("lurod", "名詞", "ウサギ"))),
+		preposition("fua", "〜のために", 
+			derived_noun("-o", "〜すること", 
+				sentence(
+					def("falsirses", "動詞", "栄養のある食べ物を食べる")
+				)
+			)
+		)
+	))
+</script>
+
+<h3>harmie alxt es julupia faller ales.lemirdia o ales.lyxija?</h3>
+
+<div id="sentence12"></div>
+
+<script>
+	sentence12.append(sentence(
+		nominative(noun(def("harmie", "名詞", "何"))),
+		adverb(def("alxt", "副詞", "いずれかで")),
+		def("es", "es型動詞", "である"),
+		complement(noun(def("julupia", "名詞", "女性"))),
+		preposition("faller", "〜から選んで", noun_phrase(
+			noun(def("ales.lemirdia", "名詞", "アレス・レミーディャ (人名)")),
+			def("o", "接続詞", "または"),
+			noun(def("ales.lyxiija", "名詞", "アレス・リュシヤ (人名)")),
+		))
+	))
+</script>
+
+<h2>10-2. hame miss lkurf mels aziurg?</h2>
+
+<h3>selene mi tydiest krantjlvil fua akrantio jynut.</h3>
+
+<div id="sentence13"></div>
+
+<script>
+	sentence13.append(sentence_with_auxiliary(
+		def("selene", "助動詞", "〜したい"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("tydiest", "mol型動詞", "行く"),
+			dative(noun(def("krantjlvil", "名詞", "図書館"))),
+			preposition("fua", "〜のために",
+				derived_noun("-o", "〜すること",
+					sentence(
+						def("akranti", "動詞", "読む"),
+						accusative(noun(def("jynut", "名詞", "本")))
+					)
+				)
+			)
+		)
+	));
+</script>
+
+<h3>yrtilera, selene vydyli'd xibacken junaflavil io co klie mi'd dystise'l fua knloano?</h3>
+
+<div id="sentence14"></div>
+
+<script>
+	sentence14.append(sentence_with_auxiliary(
+		interjection(def("yrtilera", "間投詞", "ところで")),
+		def("selene", "助動詞", "〜したい"),	
+		sentence(
+			postposition(noun_phrase(
+				genitive(def("vydyli'd", "-'d (〜の)", "明日の")),
+				noun_phrase(
+					adj_attributive(def("xibacken", "形容詞", "後半の")),
+					def("junaflavil", "名詞", "日中")
+				)
+			), "io", "〜に・で"),
+			nominative(noun(def("co", "名詞", "あなた"))),
+			def("klie", "動詞", "来る"),
+			allative(
+				noun_phrase(
+					genitive(def("mi'd", "-'d (〜の)", "私の")),
+					def("dystis", "名詞", "家")
+				),
+				def("-'l", "格接辞", "〜へ")
+			),
+			preposition("fua", "〜のために", 
+				derived_noun("-o", "〜すること",
+					sentence(
+						def("knloan", "動詞", "食べる")
+					)
+				)
+			)
+		)
+	));
+</script>
+
+<h2>11-2. miss lersse mels "elx"</h2>
+
+<h3>selene mi akranti jynut mal mi knloan lurod.</h3>
+
+<div id="sentence15"></div>
+
+<script>
+	sentence15.append(sentence_with_auxiliary(
+		def("selene", "助動詞", "〜したい"),	
+		sentence(
+			sentence(
+				nominative(noun(def("mi", "名詞", "私"))),
+				def("akranti", "動詞", "読む"),
+				accusative(noun(def("jynut", "名詞", "読む")))
+			),
+			def("mal", "接続詞", "そして"),
+			sentence(
+				nominative(noun(def("mi", "名詞", "私"))),
+				def("knloan", "動詞", "食べる"),
+				accusative(noun(def("lurod", "名詞", "ウサギ")))
+			)
+		)
+	))
+</script>
+
+<h3>selene mi akranti jynut melx mi knloan lurod.</h3>
+
+<div id="sentence16"></div>
+
+<script>
+	sentence16.append(sentence_with_auxiliary(
+		def("selene", "助動詞", "〜したい"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("akranti", "動詞", "読む"),
+			accusative(noun(def("jynut", "名詞", "読む")))
+		),
+		def("melx", "elx含有接続詞", "そして"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("knloan", "動詞", "食べる"),
+			accusative(noun(def("lurod", "名詞", "ウサギ")))
+		)
+	));
+</script>
+
+<h3>co firlex elx selene tydiesto krantjlvil.</h3>
+
+<div id="sentence17"></div>
+
+<script>
+	sentence17.append(sentence(
+		nominative(noun(def("co", "名詞", "あなた"))),
+		def("firlex", "動詞", "理解する"),
+		accusative(derived_noun("-o", "〜すること", sentence_with_auxiliary(
+			def("elx", "修飾制御類", ""),
+			def("selene", "助動詞", "〜したい"),
+			sentence(
+				def("tydiest", "mol型動詞", "行く"),
+				dative(noun(def("krantjlvil", "名詞", "図書館")))	
+			)
+		)))
+	))
+</script>
+
+<h2>12-2. miss lersse liusel "elx" ad kraftona fua tujo.</h2>
+
+<h3>mi firlex karxo tydiesto krantjlvil.</h3>
+
+<div id="sentence18"></div>
+
+<script>
+	sentence18.append(sentence(
+		nominative(noun(def("mi", "名詞", "私"))),
+		def("firlex", "動詞", "理解する"),
+		accusative(derived_noun("-o", "〜すること", sentence(
+			def("karx", "動詞", "望む"),
+			accusative(derived_noun("-o", "～すること", sentence(
+				def("tydiest", "mol型動詞", "行く"),
+				dative(noun(def("krantjlvil", "名詞", "図書館")))
+			)))
+		)))
+	))
+</script>
+
+<h3>mi firlex elx selene tydiesto krantjlvil.</h3>
+
+<div id="sentence19"></div>
+
+<script>
+	sentence19.append(sentence(
+		nominative(noun(def("mi", "名詞", "私"))),
+		def("firlex", "動詞", "理解する"),
+		accusative(derived_noun("-o", "〜すること", sentence_with_auxiliary(
+			def("elx", "修飾制御類", ""),
+			def("selene", "助動詞", "〜したい"),
+			sentence(
+				def("tydiest", "mol型動詞", "行く"),
+				dative(noun(def("krantjlvil", "名詞", "図書館")))	
+			)
+		)))
+	))
+</script>
+
+<h3>mi karx lerssergo lkurfel lineparine.</h3>
+
+<div id="sentence20"></div>
+
+<script>
+	sentence20.append(sentence(
+		nominative(noun(def("mi", "名詞", "私"))),
+		def("karx", "動詞", "望む"),
+		accusative(derived_noun("-o", "〜すること", sentence(
+			def("lersse", "動詞", "学ぶ"),
+			accusative(derived_noun("-el", "～する方法", sentence(
+				def("lkurf", "動詞", "話す"),
+				accusative(noun(def("lineparine", "名詞", "リパライン語"))),
+			)))
+		)))
+	))
+</script>
+
+<h3>selene mi lersse elx lkurfel lineparine.</h3>
+
+<div id="sentence21"></div>
+
+<script>
+	sentence21.append(sentence_with_auxiliary(
+		def("selene", "助動詞", "〜したい"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("lersse", "動詞", "学ぶ"),
+			accusative(derived_noun("-el", "～する方法", sentence_with_cancelled_auxiliary(
+				def("elx", "修飾制御類", ""),
+				sentence(
+					def("lkurf", "動詞", "話す"),
+					accusative(noun(def("lineparine", "名詞", "リパライン語"))),
+				))
+			))
+		)
+	));
+</script>
+
+<h3>xel. lkurf.</h3>
+
+<div id="sentence22"></div>
+
+<script>
+	sentence22.append(sentence(
+		imperative(),
+		def("xel", "動詞", "見る"),
+	));
+	sentence22.append(sentence(
+		imperative(),
+		def("lkurf", "動詞", "言う"),
+	));
+</script>
+
+<h3>shrlo xel mal lkurf.</h3>
+
+<div id="sentence23"></div>
+
+<script>
+	sentence23.append(sentence_with_auxiliary(
+		def("shrlo", "助動詞", "〜せよ"),
+		sentence(
+			sentence(
+				def("xel", "動詞", "見る"),
+			),
+			def("mal", "接続詞", "そして"),
+			sentence(
+				def("lkurf", "動詞", "言う"),
+			)
+		)
+	))
+</script>
+
+<h3>xel melx shrlo lkurf.</h3>
+
+<div id="sentence24"></div>
+
+<script>
+	sentence24.append(sentence_with_auxiliary(
+		sentence(
+			imperative(),
+			def("xel", "動詞", "見る"),
+		),
+		def("melx", "elx含有接続詞", "そして"),
+		def("shrlo", "助動詞", "～せよ"),
+		sentence(
+			def("lkurf", "動詞", "言う"),
+		)
+	));
+</script>
+
+<h2>qate ingglimen inelnes</h2>
+
+<h3>
+	edioll mi klie fal dystis fon hjorgo mal mi'd aziurg fon anpanqa'd snenik es elx tydiesto kjorto fua xelo mi'd mena.
+</h3>
+
+<div id="sentence25"></div>
+
+<script>
+	sentence25.append(sentence_with_auxiliary(
+		def("edioll", "助動詞", "～した"),
+		sentence(
+			sentence(
+				nominative(noun(def("mi", "名詞", "私"))),
+				def("klie", "動詞", "見る"),
+				preposition("fal", "〜に・で", noun_phrase(
+					noun(def("dystis", "名詞", "家")),
+					def("fon", "- fon -", `英語の "of"`),
+					noun(def("hjorgo", "名詞", "兵庫"))
+				))
+			),
+			def("mal", "接続詞", "そして"),
+			sentence(
+				nominative(
+					noun_phrase(
+						noun_phrase(
+							genitive(def("mi'd", "-'d (～の)", "私の")),
+							def("aziurg", "名詞", "予定"),
+						),
+						def("fon", "- fon -", `英語の "of"`),
+						noun_phrase(
+							genitive(def("anpanqa'd", "-'d (～の)", "10個の")),
+							def("snenik", "名詞", "日"),
+						)
+					)
+				),
+				def("es", "es型動詞", "である"),
+				complement(derived_noun("-o", "～すること", sentence_with_cancelled_auxiliary(
+					def("elx", "修飾制御類", ""),
+					sentence(
+						def("tydiest", "mol型動詞", "行く"),
+						dative(noun(def("kjorto", "名詞", "京都"))),
+						preposition("fua", "〜のために",
+							derived_noun("-o", "〜すること",
+								sentence(
+									def("xel", "動詞", "見る"),
+									accusative(noun_phrase(
+										genitive(def("mi'd", "-'d (～の)", "私の")),
+										def("mena", "名詞", "友達"),
+									))
+								)
+							)
+						)
+					))
+				))
+			)
+		),
+	));
+</script>
