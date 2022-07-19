@@ -1,5 +1,75 @@
 # lipalain_celao
 
+## 実例
+https://alarta-fua-fyrdeneriso-lineparine.github.io/lipalain_celao/lineparine'd_celao_zu_letix_pustiej.html
+
+![](https://raw.githubusercontent.com/alarta-fua-fyrdeneriso-lineparine/lipalain_celao/master/klirma_fon_pustiej.png)
+
+こういうのを
+
+```html
+<h3>selene mi tydiest krantjlvil fua akrantio jynut.</h3>
+
+<div id="sentence13"></div>
+
+<script>
+	sentence13.append(sentence_with_auxiliary(
+		def("selene", "助動詞", "〜したい"),
+		sentence(
+			nominative(noun(def("mi", "名詞", "私"))),
+			def("tydiest", "mol型動詞", "行く"),
+			dative(noun(def("krantjlvil", "名詞", "図書館"))),
+			preposition("fua", "〜のために",
+				derived_noun("-o", "〜すること",
+					sentence(
+						def("akranti", "動詞", "読む"),
+						accusative(noun(def("jynut", "名詞", "本")))
+					)
+				)
+			)
+		)
+	));
+</script>
+
+<h3>yrtilera, selene vydyli'd xibacken junaflavil io co klie mi'd dystise'l fua knloano?</h3>
+
+<div id="sentence14"></div>
+
+<script>
+	sentence14.append(sentence_with_auxiliary(
+		interjection(def("yrtilera", "間投詞", "ところで")),
+		def("selene", "助動詞", "〜したい"),
+		sentence(
+			postposition(noun_phrase(
+				genitive(def("vydyli'd", "-'d (〜の)", "明日の")),
+				noun_phrase(
+					adj_attributive(def("xibacken", "形容詞", "後半の")),
+					def("junaflavil", "名詞", "日中")
+				)
+			), "io", "〜に・で"),
+			nominative(noun(def("co", "名詞", "あなた"))),
+			def("klie", "動詞", "来る"),
+			allative(
+				noun_phrase(
+					genitive(def("mi'd", "-'d (〜の)", "私の")),
+					def("dystis", "名詞", "家")
+				),
+				def("-'l", "格接辞", "〜へ")
+			),
+			preposition("fua", "〜のために",
+				derived_noun("-o", "〜すること",
+					sentence(
+						def("knloan", "動詞", "食べる")
+					)
+				)
+			)
+		)
+	));
+</script>
+```
+
+ぐらいのコード量で書くためのやつです
+
 
 ## 使い方（日本語の対訳を書きたいとき）
 
