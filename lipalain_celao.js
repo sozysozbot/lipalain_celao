@@ -85,11 +85,15 @@ function nominative(node) {
 	return div;
 }
 
-function accusative(node) {
+function accusative(...nodes) {
 	const div = document.createElement("div");
 	div.classList.add("box", "box-accusative");
-	div.append(node, document.createElement("br"), "\u00a0", "-'i", case_annotation(" (～を)"), "\u00a0");
+	div.append(...nodes, document.createElement("br"), "\u00a0", "-'i", case_annotation(" (～を)"), "\u00a0");
 	return div;
+}
+
+function accusative_explicit(...nodes) {
+	return accusative(...nodes, def("-'i", _("格接辞"), "〜を"))
 }
 
 function dative(node) {
@@ -166,6 +170,28 @@ function derived_noun(suffix, translation, sentence_node) {
 		def(suffix, _("動詞派生接辞"), translation), document.createElement("br"),
 		sentence_node, document.createElement("br"),
 		"\u00a0", _("名詞"), "\u00a0"
+	);
+	return div;
+}
+
+function derived_adverb(suffix, translation, sentence_node) {
+	const div = document.createElement("div");
+	div.classList.add("box", "box-adverb");
+	div.append(
+		def(suffix, _("動詞派生接辞"), translation), document.createElement("br"),
+		sentence_node, document.createElement("br"),
+		"\u00a0", _("副詞"), "\u00a0"
+	);
+	return div;
+}
+
+function dependent_clause_t(...nodes) {
+	const div = document.createElement("div");
+	div.classList.add("box", "box-dependent-clause-t");
+	div.append(
+		...nodes,
+		def("-t", _("接辞"), "従属節明示"),
+		document.createElement("br"), "\u00a0", "-t", case_annotation(" (従属節明示)"), "\u00a0"
 	);
 	return div;
 }

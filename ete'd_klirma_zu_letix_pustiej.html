@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="boxes.css">
+
+<script src="lipalain_celao.js"></script>
+
+<h3>asti'e'it falvixon kukht.</h3>
+
+<div id="sentence26"></div>
+
+<script>
+    sentence26.append(sentence(
+        derived_adverb(
+            "-on", "〜して",
+            sentence(
+                dependent_clause_t(
+                    accusative_explicit(
+                        noun(def("asti'e", "名詞", "回路")),
+                    )
+                ),
+                def("falvix", "動詞", "繋げる")
+            )
+        ),
+        def("kukht", "動詞", "ショートする"),
+    ));
+</script>

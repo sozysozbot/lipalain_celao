@@ -1,7 +1,7 @@
 # lipalain_celao
 
 ## 実例
-https://alarta-fua-fyrdeneriso-lineparine.github.io/lipalain_celao/lineparine'd_celao_zu_letix_pustiej.html
+https://alarta-fua-fyrdeneriso-lineparine.github.io/lipalain_celao/lineparine%27d_celao_zu_letix_pustiej.html
 
 ![](https://raw.githubusercontent.com/alarta-fua-fyrdeneriso-lineparine/lipalain_celao/master/klirma_fon_pustiej.png)
 
@@ -94,7 +94,7 @@ main.css, boxes.css, lipalain_celao.js の 3 ファイルを配置して、そ�
 </script>
 ```
 
-( `sentence1.append` のところは本当は `document.getElementById("sentence1").append` の方が適正ですが、短縮記法でも一応動きます）
+（`sentence1.append` のところは本当は `document.getElementById("sentence1").append` の方が適正ですが、短縮記法でも一応動きます）
 
 とすることで表示されます。
 
@@ -133,6 +133,7 @@ REPLACE_ANNOTATION = {
 	"間投詞": "krackrafi'a",
 	"後置詞": "kafnisfamsk",
 	"格接辞": "sansa'd klapals",
+	"接辞": "klapals",
 	"elx含有接続詞": `kranti'a zu laxn "elx"`,
 	"修飾制御類": `"elx"`,
 	"助動詞が打ち消された文": "krandiurg zu dirjas kraftona",

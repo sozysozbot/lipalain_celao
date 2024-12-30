@@ -96,3 +96,8 @@
 .box.box-interjection {
     border-style: dotted;
 }
+
+.box.box-dependent-clause-t {
+    background: #a0ede8;
+    border-style: dashed;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="boxes.css">
+
+<style>
+	.translation { display: none; }
+	.case_annotation { display: none; }
+</style>
+
+<script>
+REPLACE_ANNOTATION = {
+	"名詞": "ftlexest",
+	"動詞": "ftona",
+	"文": "krandiurg",
+	"前置詞": "kraftanix",
+	"副詞": "ftonaol",
+	"-'d (～の)": "-'d",
+	"-'d (〜の)": "-'d",
+	"形容詞": "kraftan",
+	"補語": "jurlt",
+	"es型動詞": `"es" xale ftona`,
+	" (疑問詞)": " (hmakrant)",
+	"接続詞": "kranti'a",
+	"動詞派生接辞": "jujolel",
+	"助動詞": "kraftona",
+	"mol型動詞": `"mol" xale ftona`,
+	"助動詞を含む文": "krandiurg zu laxn kraftona",
+	"間投詞": "krackrafi'a",
+	"後置詞": "kafnisfamsk",
+	"格接辞": "sansa'd klapals",
+	"接辞": "klapals",
+	"elx含有接続詞": `kranti'a zu laxn "elx"`,
+	"修飾制御類": `"elx"`,
+	"助動詞が打ち消された文": "krandiurg zu dirjas kraftona",
+	"文頭動詞命令": "lkurfanggeng shrlovel"
+}
+</script>
+
+<script src="lipalain_celao.js"></script>
+
+<h3>asti'e'it falvixon kukht.</h3>
+
+<div id="sentence26"></div>
+
+<script>
+    sentence26.append(sentence(
+        derived_adverb(
+            "-on", "〜して",
+            sentence(
+                dependent_clause_t(
+                    accusative_explicit(
+                        noun(def("asti'e", "名詞", "回路")),
+                    )
+                ),
+                def("falvix", "動詞", "繋げる")
+            )
+        ),
+        def("kukht", "動詞", "ショートする"),
+    ));
+</script>
